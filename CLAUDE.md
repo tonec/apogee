@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+We're building the app described in `docs/specs/`
+
+Keep replies concise and focused on key information. No unnecessary fluff, no long code snippets.
+
 ## Project status
 
 This repository (`apogee`) has no code yet. It holds a single commit with a placeholder `README.md`. There is no language, build system, test framework or architecture to document.
