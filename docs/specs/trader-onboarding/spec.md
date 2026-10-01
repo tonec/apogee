@@ -24,7 +24,7 @@ Regulatory data depends on entity type (assumption, to be confirmed by drafting 
 5. Tell the trader plainly that their network voicemail no longer takes diverted calls, how to undo each divert (`##61#`, `##67#`, `##62#`; EE `##004#`; O2 voicemail restore code), and that callers hear an automated message then get a text.
 6. Run the test-call matrix on the trader's own network and handset: not answered, busy, declined, phone off/airplane mode, from a mobile, a landline and a withheld number.
 7. Check how Do Not Disturb / Focus modes interact with diverts on their handset.
-8. Sign the data-processing agreement; send the privacy notice link.
+8. Sign the data-processing agreement and confirm the sub-processor list (see `specs/data-protection`); send the privacy notice link.
 9. Go-live checklist signed off: drills passed, backup contact tested, trader acknowledges an urgent test alert.
 10. Offboarding: trader cancels diverts; number released; data deleted per retention policy.
 

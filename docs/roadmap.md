@@ -8,6 +8,7 @@ Thresholds in gates are placeholders. Set them before each phase starts.
 - Consolidate findings in `research/`; resolve items in `research/open-questions.md`.
 - Draft a Twilio UK mobile regulatory bundle in the Console as an Individual (sole trader) and as a Business (Ltd company) to see what each requires; assume one bundle per trader.
 - Decide the pilot trade and region (electricians suggested: steadier demand than heating in autumn).
+- Complete the sub-processor register in `specs/data-protection`, obtain fixed-fee solicitor quotes for a DPA template review, and decide retention periods.
 
 ## Phase 1: Vertical slice (about 1 week)
 Build one end-to-end path using the specs in `specs/`:

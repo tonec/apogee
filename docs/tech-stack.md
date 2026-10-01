@@ -39,6 +39,9 @@ Status: draft · Last updated: 2026-10-01
 - **Mock outbound** SMS/voice clients; Twilio test credentials where they cover the call (check current docs).
 - **Real UK phones** for divert, caller ID and delivery checks once the UK number is approved. A US number is fine for logic only; do not draw conclusions about UK delivery from it.
 
+## Regions and data protection
+Host Fly.io and Supabase in London where possible. Retention, logging and LLM data-handling rules are in `specs/data-protection`.
+
 ## Hosting and safety nets
 - Voice fallback URL on each number returns a static message and hangs up. **Do not dial back to the trader's mobile** from the fallback: the call may divert straight back to the service and loop (to be verified).
 - Scheduled synthetic call/text check; page the developer on failure.

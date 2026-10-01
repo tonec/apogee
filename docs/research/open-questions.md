@@ -23,5 +23,5 @@ Status: living · Last updated: 2026-10-01
 - Whether a link-instead-of-reply flow outperforms reply-by-text.
 
 ## Legal
-- Data-processing agreement template; controller/processor roles confirmed by an adviser.
+- Data-processing agreement template; controller/processor roles confirmed by an adviser. See `specs/data-protection/spec.md` for the data inventory, sub-processor register and the list of questions for the solicitor.
 - Whether the voice message and text disclosure wording is sufficient.
