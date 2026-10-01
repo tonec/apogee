@@ -13,8 +13,8 @@ This repository (`apogee`) has no code yet. It holds a single commit with a plac
 ## Specs
 
 Features are specified in `docs/specs/` before they are built:
-- `constitution.md` holds the project-wide principles, constraints and tech stack. Every feature must follow it.
-- Each feature has its own folder with `requirements.md` (user stories and acceptance criteria), `design.md` (architecture, interfaces and data models) and `tasks.md` (a checklist to work through in order, ticking items off as they are done).
+
+- Each feature has its own folder with `spec.md` (user stories and acceptance criteria), `design.md` (architecture, interfaces and data models) and `tasks.md` (a checklist to work through in order, ticking items off as they are done).
 - `feature-name/` is the template. Copy it for each new feature.
 
 Update this file once the project is scaffolded. Add:

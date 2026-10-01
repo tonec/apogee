@@ -3,7 +3,10 @@
 Status: living · Last updated: 2026-10-01
 
 ## Telephony
-- Does the UK ISV regulatory bundle need each trader's business details? One bundle per trader or reusable? Subaccount per trader workable?
+- Confirm one regulatory bundle per trader (current assumption). Draft a UK mobile bundle as Individual and as Business in the Console and record exactly which fields and documents each asks for.
+- Does an Individual mobile bundle need an address with documents, or only a mobile number? Does Business need a website URL?
+- Are sole traders ever rejected as Individual, and what does Twilio reject on? (A forum thread suggests friction; unverified.)
+- Subaccount per trader workable? Can bundles be cloned or reused across subaccounts?
 - How often do UK carriers populate `ForwardedFrom`? (Log it in the pilot.)
 - Does caller ID survive diverts from EE, O2, Vodafone and Three?
 - How do Do Not Disturb/Focus modes interact with conditional diverts?

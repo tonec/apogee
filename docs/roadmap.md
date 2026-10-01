@@ -6,12 +6,12 @@ Thresholds in gates are placeholders. Set them before each phase starts.
 
 ## Phase 0: Research and decisions (in progress)
 - Consolidate findings in `research/`; resolve items in `research/open-questions.md`.
-- Draft Twilio UK regulatory bundle in the Console to see what the ISV flow requires.
+- Draft a Twilio UK mobile regulatory bundle in the Console as an Individual (sole trader) and as a Business (Ltd company) to see what each requires; assume one bundle per trader.
 - Decide the pilot trade and region (electricians suggested: steadier demand than heating in autumn).
 
 ## Phase 1: Vertical slice (about 1 week)
 Build one end-to-end path using the specs in `specs/`:
-1. Day 1: buy a UK mobile (+447) number and submit the regulatory bundle; build the voice webhook and first-text job locally (US number allowed for logic only).
+1. Day 1: submit the regulatory bundle for your first trader (or yourself as a stand-in) and buy a UK mobile (+447) number once it is approved; build the voice webhook and first-text job locally (US number allowed for logic only). Remember each additional pilot trader needs their own bundle and review time.
 2. Days 2–3: inbound SMS, state machine, scripted questions, extraction, job card page and delivery.
 3. Days 4–5: urgency rules, safety text, alert ladder with timers and acknowledgement.
 4. Day 6: events table, outcome links, metrics queries, synthetic health check, voice fallback.

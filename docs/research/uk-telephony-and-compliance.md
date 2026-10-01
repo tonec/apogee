@@ -16,8 +16,18 @@ Use a UK mobile number per trader so the diverted call and the outgoing text sha
 - All UK long codes need an approved Regulatory Compliance bundle to send messages or make voice calls (new numbers since 27 May 2024; all numbers since 30 Sep 2024).
 - Review generally up to 3 business days; some regions take weeks.
 - Business bundles: authorised representative's phone must be a real mobile number, not a number from a provider like Twilio.
-- **ISV vs Direct:** Direct Customer = business uses the number to communicate internally or with its own customers. ISV/Reseller/Partner = business uses Twilio in a product it sells to its customers. This product is **ISV**. The UK form asks ISVs whether numbers are assigned to end customers (answer: yes). Extra per-trader requirements not confirmed; see open questions.
+- **ISV vs Direct:** Direct Customer = business uses the number to communicate internally or with its own customers. ISV/Reseller/Partner = business uses Twilio in a product it sells to its customers. This product is **ISV**. The UK form asks ISVs whether numbers are assigned to end customers (answer: yes).
+- **Working assumption: one bundle per trader.** Twilio's Bundles API documentation describes a bundle as referencing the compliance information of the end-user who actually answers the call or receives the message. Not yet confirmed in the Console.
+- **Entity type:** sole traders have no company registration number, so the Individual end-user type is the likely fit; Ltd companies use Business. A pasted third-party summary (AI-generated, citations unverified) says registering a sole trader as Business without a company number causes automated rejections; treat as unconfirmed.
+- **Requirements differ by number type** (per Twilio's UK regulatory guidelines page):
+  - Local/National, Individual: proof of identity (government ID or passport) and proof of UK address (utility bill, tax notice, rent receipt, title deed, etc.).
+  - Local/National, Business: authorised representative's real mobile number; business classification (Direct vs ISV); ISV question.
+  - Mobile/Toll-free, Individual: a valid mobile number where the customer can be reached (not a CPaaS number). The API reference also lists an individual address item; whether this requires a document is unconfirmed.
+  - Mobile/Toll-free, Business: authorised representative's mobile number plus the ISV question.
+- **Companies House verification:** Twilio's changelog describes increased digital verification of UK business registration data (change dated early January 2025) and says documents are no longer required for businesses not registered at Companies House. The exact Business field list (e.g. website URL) is unconfirmed.
+- **Why prefer mobile numbers:** documented requirements are lighter, so you may avoid collecting and storing traders' ID and utility bills (UK GDPR burden).
 - Consider a Twilio subaccount per trader (to confirm).
+- Twilio's Bundle Clone resource copies an approved bundle to another account within the same organisation; it reuses one end-user's data, so it does not remove the per-trader requirement.
 
 ## Call forwarding (diverts) from UK mobiles
 - Standard GSM codes: busy `**67*number#`, no answer `**61*number#`, unreachable `**62*number#`; cancel with `##67#`, `##61#`, `##62#`; check with `*#61#` etc. Set all three to the same destination.
@@ -39,6 +49,8 @@ Use a UK mobile number per trader so the diverted call and the outgoing text sha
 - Emergency wording in the first text (999; gas emergency 0800 111 999): verify current official wording before shipping.
 
 ## Sources
+- https://www.twilio.com/docs/phone-numbers/regulatory/api/bundles (end-user who answers the call)
+- https://www.twilio.com/en-us/changelog/increased-digital-verification-for-uk-regulatory-compliance-bund
 - https://www.twilio.com/en-us/guidelines/gb/regulatory
 - https://www.twilio.com/docs/phone-numbers/regulatory/reading-regulations-for-the-uk-bundle
 - https://www.twilio.com/docs/phone-numbers/regulatory/getting-started/console-create-new-bundle
